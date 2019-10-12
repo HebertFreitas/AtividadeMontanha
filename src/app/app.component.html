@@ -1,0 +1,20 @@
+<h1>
+  Cadastro de Pessoas
+</h1>
+<form>
+  <label for="nome">Nome FANTASIA: </label>
+  <input type="text" name="nome" [(ngModel)]="client.Nome">
+  <br />
+  <label for="cpf">CNPJ: </label>
+  <input type="text" name="cpf" [(ngModel)]="client.cpf"> 
+   <div *ngIf="!client.Valido()">
+     CPF Inválido!
+   </div>
+   <label for="nome">Razão Social: </label>
+  <input type="text" name="nome" [(ngModel)]="client.Nome">
+  <br />
+  <div>
+    <input type="button" value="Salvar" (click)="salvar()">
+  </div>
+
+</form>
